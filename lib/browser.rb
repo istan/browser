@@ -80,8 +80,7 @@ class Browser
 
   # Get the browser identifier.
   def id
-    NAMES.keys
-      .find {|id| respond_to?("#{id}?") ? public_send("#{id}?") : id }
+    NAMES.keys.find {|id| respond_to?("#{id}?") ? public_send("#{id}?") : id }
   end
 
   # Return major version.
