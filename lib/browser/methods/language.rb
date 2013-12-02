@@ -122,10 +122,7 @@ class Browser
 
     # Return an array with all preferred languages that this browser accepts.
     def accept_language
-      @accept_language
-        .gsub(/;q=[\d.]+/, "")
-        .split(",")
-        .collect {|l| l.downcase.gsub(/\s/m, "")}
+      @accept_language.gsub(/;q=[\d.]+/, "").split(",").collect {|l| l.downcase.gsub(/\s/m, "")}
     end
   end
 end
